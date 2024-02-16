@@ -16,4 +16,15 @@ public class TwentyMethods {
         }
         return chars;
     }
+    //3 приминает 2 инта, а и б, возвращает большее из этих 2х чисел
+    public static int returnMaxOfTwoInts(int a, int b){
+        if(a>b) {
+            return a;
+        }
+        else {
+            return b;
+        }
+
+
+    }
 }

@@ -27,14 +27,6 @@ public class Starter {
         System.out.println(STRING);
 
         //3 приминает 2 инта, а и б, возвращает большее из этих 2х чисел.
-
-        System.out.println(returnMaxOfTwoInts(100500,300));
-
-
-
+        System.out.println(returnMaxOfTwoInts(100500, 300));
     }
-
-
-
-
 }

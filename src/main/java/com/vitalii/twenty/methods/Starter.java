@@ -1,6 +1,8 @@
 package com.vitalii.twenty.methods;
 
 
+import static com.vitalii.twenty.methods.TwentyMethods.returnMaxOfTwoInts;
+
 public class Starter {
 
     public static final String STRING = "******";
@@ -24,6 +26,7 @@ public class Starter {
         System.out.println(TwentyMethods.modifyCharArrayToIntArray(new int[]{}));
         System.out.println(STRING);
 
-
+        //3 приминает 2 инта, а и б, возвращает большее из этих 2х чисел.
+        System.out.println(returnMaxOfTwoInts(100500, 300));
     }
 }

@@ -1,7 +1,7 @@
 package com.vitalii.twenty.methods;
 
 
-import static com.vitalii.twenty.methods.TwentyMethods.returnMaxOfTwoInts;
+import static com.vitalii.twenty.methods.TwentyMethods.*;
 
 public class Starter {
 
@@ -28,5 +28,17 @@ public class Starter {
 
         //3 приминает 2 инта, а и б, возвращает большее из этих 2х чисел.
         System.out.println(returnMaxOfTwoInts(100500, 300));
+
+        //3.1 приминает 2 инта, а и б, возвращает большее из этих 2х чисел.
+        System.out.println(returnMaxOfTwoIntsWithMath(32, 23));
+
+        //3.2 приминает 2 инта, а и б, возвращает большее из этих 2х чисел.
+        System.out.println(returnMaxOfTwoIntsWithThernary(20, 10));
+
+        //4 принимает 3 инта, возвращает большее из них
+        System.out.println(returnMaxOfThreeInts(5, 88, 10));
+
+        //5 приминает 5 интов, возвращает большее из них
+        System.out.println(returnMaxOfFiveIntsWithVarargs(2, 3, 125, 5, 99));
     }
 }

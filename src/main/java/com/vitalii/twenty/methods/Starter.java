@@ -34,5 +34,11 @@ public class Starter {
 
         //3.2 приминает 2 инта, а и б, возвращает большее из этих 2х чисел.
         System.out.println(returnMaxOfTwoIntsWithThernary(20, 10));
+
+        //4 принимает 3 инта, возвращает большее из них
+        System.out.println(returnMaxOfThreeInts(5, 88, 10));
+
+        //5 приминает 5 интов, возвращает большее из них
+        System.out.println(returnMaxOfFiveIntsWithVarargs(2, 3, 125, 5, 99));
     }
 }

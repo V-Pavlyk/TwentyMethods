@@ -34,4 +34,21 @@ public class TwentyMethods {
     public static int returnMaxOfTwoIntsWithThernary(int a, int b) {
         return (a > b) ? a : b;
     }
+
+    //4 принимает 3 инта, возвращает большее из них
+    public static int returnMaxOfThreeInts(int a, int b, int c) {
+        int tempMax = returnMaxOfTwoInts(a, b);
+        return returnMaxOfTwoInts(tempMax, c);
+    }
+
+    //5 приминает 5 интов, возвращает большее из них
+    public static int returnMaxOfFiveIntsWithVarargs(int... nums) {
+        int max = nums[0];
+        for (int num : nums) {
+            if (num > max) {
+                max = num;
+            }
+        }
+        return max;
+    }
 }

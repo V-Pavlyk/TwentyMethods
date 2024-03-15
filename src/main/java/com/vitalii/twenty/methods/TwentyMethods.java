@@ -13,7 +13,7 @@ public class TwentyMethods {
      * 2 принимает массив интов, возвращает массив чаров,
      * каждый символ в позиции массива соответствует коду символа передаваемого инта
      */
-    public static char[] modifyCharArrayToIntArray(int[] ints) {
+    public static char[] getCharsFromInts(int[] ints) {
         char[] chars = new char[ints.length];
         for (int i = 0; i < ints.length; i++) {
             chars[i] = (char) ints[i];
@@ -24,39 +24,42 @@ public class TwentyMethods {
     /**
      * 3 принимает 2 инта, а и б, возвращает большее из этих 2х чисел.
      */
-    public static int returnMaxOfTwoInts(int a, int b) {
-        if (a > b) {
-            return a;
+    public static int getMaxOfTwoInts(int firstInt, int secondInt) {
+        if (firstInt > secondInt) {
+            return firstInt;
         }
-        return b;
+        return secondInt;
     }
 
     /**
      * 3.1 принимает 2 инта, а и б, возвращает большее из этих 2х чисел
      */
-    public static int returnMaxOfTwoIntsWithMath(int c, int d) {
-        return Math.max(c, d);
+    public static int getMaxOfTwoIntsWithMath(int firstInt, int secondInt) {
+        return Math.max(firstInt, secondInt);
     }
 
     /**
      * 3.2 принимает 2 инта, а и б, возвращает большее из этих 2х чисел
      */
-    public static int returnMaxOfTwoIntsWithThernary(int a, int b) {
-        return (a > b) ? a : b;
+    public static int getMaxOfTwoIntsWithThernary(int firstInt, int secondInt) {
+        return (firstInt > secondInt) ? firstInt : secondInt;
     }
 
     /**
      * 4 принимает 3 инта, возвращает большее из них
      */
     public static int returnMaxOfThreeInts(int a, int b, int c) {
-        int tempMax = returnMaxOfTwoInts(a, b);
-        return returnMaxOfTwoInts(tempMax, c);
+        int tempMax = getMaxOfTwoInts(a, b);
+        return getMaxOfTwoInts(tempMax, c);
     }
 
     /**
      * 5 принимает 5 интов, возвращает большее из них
      */
     public static int returnMaxOfFiveIntsWithVarargs(int... nums) {
+        if (nums.length != 5) {
+            System.out.println("Array length is not 5");
+        }
         int max = nums[0];
         for (int num : nums) {
             if (num > max) {
@@ -77,7 +80,7 @@ public class TwentyMethods {
      * 8 принимает массив интов, и значение типа инт, возвращает индекс массива в котором
      * значение совпадает с передаваемым, начиная с начала массива. Если значения в массиве нет возвращает -1
      */
-    public static int returnsIndexFromBeginningOfArray(int[] array, int value) {
+    public static int getIndexFromBeginningOfArray(int[] array, int value) {
         for (int i = 0; i < array.length; i++) {
             if (value == array[i]) {
                 return i;
@@ -90,12 +93,11 @@ public class TwentyMethods {
      * 9 принимает массив интов, и значение типа инт, возвращает индекс массива в котором
      * значение совпадает с передаваемым, начиная с конца массива. Если значения в массиве нет возвращает -1
      */
-    public static int returnsIndexFromEndOfArray(int[] array, int value) {
+    public static int getIndexFromEndOfArray(int[] array, int value) {
         for (int i = array.length - 1; i >= 1; i--) {
             if (value == array[i]) {
                 return i;
             }
-
         }
         return -1;
     }
@@ -114,7 +116,7 @@ public class TwentyMethods {
     /**
      * 11 принимает инт год, и возвращает тру если год высокосный
      */
-    public static boolean IsThisLeapYear(int year) {
+    public static boolean isLeapYear(int year) {
         if (year % 4 == 0) {
             if (year % 100 == 0) {
                 return year % 400 == 0;
@@ -127,10 +129,10 @@ public class TwentyMethods {
     /**
      * 12 принимает массив интов и число, выводит на екран только елементы массива которые кратны этому числу
      */
-    public static void displaysMultipleElementsOfArray(int[] array, int num) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] % num == 0) {
-                System.out.println(array[i]);
+    public static void displayMultipleElementsOfArray(int[] array, int num) {
+        for (int j : array) {
+            if (j % num == 0) {
+                System.out.println(j);
             }
         }
     }

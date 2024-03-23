@@ -1,6 +1,8 @@
 package com.vitalii.twenty.methods;
 
 
+import java.util.Arrays;
+
 import static com.vitalii.twenty.methods.TwentyMethods.*;
 
 public class Starter {
@@ -135,6 +137,64 @@ public class Starter {
         System.out.println(STRING);
         System.out.println("12. displayMultipleElementsOfArray");
         TwentyMethods.displayMultipleElementsOfArray(new int[]{1, 10, 5, 2, 100, 60, 33, 9, 12}, 3);
+        System.out.println(STRING_2);
+
+        /**
+         * 13 метод принимает массив интов сортирует его по возрастанию
+         */
+        System.out.println(STRING);
+        System.out.println("13. sortArrayAscend");
+        TwentyMethods.sortArrayAscend(new int[]{33, 10, 5, 103, 54, 89});
+        System.out.println(STRING_2);
+
+        /**
+         * 14 принимает массив байт, если в массиве есть повторяющиеся елементы, возвращает тру
+         */
+        System.out.println(STRING);
+        System.out.println("14.getTrueIfElementsRepeat");
+        System.out.println(getTrueIfElementRepeat(new byte[]{100, 22, 99, 5, 10, 22}));
+        System.out.println(STRING_2);
+
+        /**
+         * 15 принимает два массива интов одинаковых по длинне, возращает массив интов, который состоит
+         * из перемноженных елементов входящих массивов.
+         */
+        System.out.println(STRING);
+        System.out.println("15.getArrayIntsFromMultiplicationOfTwoArrays");
+        System.out.println(Arrays.toString(getArrayIntsFromMultiplicationOfTwoArrays(new int[]{100, 22, 99, 5, 10, 22}, new int[]{2, 10, 3, 87, 102, 5})));
+        System.out.println(STRING_2);
+
+        /**
+         * 16 принимает два массива интов, возвращает массив из елементов, которые не совпадают в массивах
+         */
+
+        /**
+         * 17 принимает масив интов, возвращает его же но в реверсном порядке
+         */
+        System.out.println(STRING);
+        System.out.println("17.getReverseArray");
+        System.out.println(Arrays.toString(getReverseArray(new int[]{500, 92, 54, 3, 1035, 21})));
+        System.out.println(STRING_2);
+
+        /**
+         * 18 принимает 3 инта:
+         * - размер выходного массива
+         * - нижняя граница
+         * - верхняя граница
+         * возвращает массив интов заданой длинны, который содержит случайные числа от нижней границы до верхней границы"
+         */
+        System.out.println(STRING);
+        System.out.println("18.getIntArrayByParameters");
+        System.out.println(Arrays.toString(getIntArrayByParameters(8, 5, 100)));
+        System.out.println(STRING_2);
+
+        /**
+         * принимает 2 массива чаров, проверяет есть ли в 1 массиве, такая же последовательность символов,
+         * которую представляет собой второй массив. Возвращает булеан
+         */
+        System.out.println(STRING);
+        System.out.println("19. getTrueIfArraysEquals");
+        System.out.println(getTrueIfArraysEquals(new char[]{'H', 'e', 'l', 'l', 'o', '!'}, new char[]{'H', 'e', 'l', 'l', 'o', '!'}));
         System.out.println(STRING_2);
     }
 }

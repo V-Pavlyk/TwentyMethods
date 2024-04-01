@@ -1,6 +1,8 @@
 package com.vitalii.twenty.methods;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class TwentyMethods {
 
@@ -50,7 +52,7 @@ public class TwentyMethods {
     /**
      * 4 принимает 3 инта, возвращает большее из них.
      */
-    public static int returnMaxOfThreeInts(int a, int b, int c) {
+    public static int getMaxOfThreeInts(int a, int b, int c) {
         int tempMax = getMaxOfTwoInts(a, b);
         return getMaxOfTwoInts(tempMax, c);
     }
@@ -58,7 +60,7 @@ public class TwentyMethods {
     /**
      * 5 принимает 5 интов, возвращает большее из них.
      */
-    public static int returnMaxOfFiveIntsWithVarargs(int... nums) {
+    public static int getMaxOfFiveIntsWithVarargs(int... nums) {
         if (nums.length != 5) {
             System.out.println("Array length is not 5");
         }
@@ -74,7 +76,7 @@ public class TwentyMethods {
     /**
      * 6 принимает массив чаров, возвращает строку состоящую из символов массива.
      */
-    public static String returnStringOfArrayChars(char[] array) {
+    public static String getStringOfChars(char[] array) {
         return new String(array);
     }
 
@@ -107,7 +109,7 @@ public class TwentyMethods {
     /**
      * 10 метод принимает инт, и возвращает факториал от заданого инта.
      */
-    public static int returnFactorial(int n) {
+    public static int getFactorial(int n) {
         int result = 1;
         for (int i = 1; i <= n; i++) {
             result = result * i;
@@ -142,20 +144,18 @@ public class TwentyMethods {
     /**
      * 13 метод принимает массив интов сортирует его по возрастанию.
      */
-    public static void sortArrayAscend(int[] array) {
-        Arrays.sort(array);
-        for (int values : array) {
-            System.out.println(values);
-        }
+    public static int[] sortIntsInAscendingOrder(int[] ints) {
+        Arrays.sort(ints);
+        return ints;
     }
 
     /**
      * 14 принимает массив байт, если в массиве есть повторяющиеся елементы, возвращает тру.
      */
-    public static boolean getTrueIfElementRepeat(byte[] array) {
-        for (int i = 0; i < array.length; i++) {
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[i] == array[j]) {
+    public static boolean hasRepeatedElements(byte[] bytes) {
+        for (int i = 0; i < bytes.length; i++) {
+            for (int j = i + 1; j < bytes.length; j++) {
+                if (bytes[i] == bytes[j]) {
                     return true;
                 }
             }
@@ -167,7 +167,11 @@ public class TwentyMethods {
      * 15 принимает два массива интов одинаковых по длинне, возращает массив интов, который состоит
      * из перемноженных елементов входящих массивов.
      */
-    public static int[] getArrayIntsFromMultiplicationOfTwoArrays(int[] firstArray, int[] secondArray) {
+    public static int[] getIntArrayFromMultiplicationOfTwoIntArraysOfTheSameLength(int[] firstArray, int[] secondArray) {
+        if (firstArray.length != secondArray.length) {
+            System.out.println("Arrays length is different");
+            return new int[]{};
+        }
         int[] result = new int[firstArray.length];
         for (int i = 0; i < firstArray.length; i++) {
             result[i] = firstArray[i] * secondArray[i];
@@ -176,31 +180,60 @@ public class TwentyMethods {
     }
 
     /**
-     * 16 принимает два массива интов, возвращает массив из елементов, которые не совпадают в массивах
+     * 16 принимает два массива интов, возвращает массив из елементов, которые не совпадают в массивах.
      */
-
-    /**
-     * 17 принимает масив интов, возвращает его же но в реверсном порядке
-     */
-    public static int[] getReverseArray(int[] array) {
-        for (int i = 0; array != null && i < array.length / 2; i++) {
-            int tempValue = array[i];
-            array[i] = array[array.length - i - 1];
-            array[array.length - i - 1] = tempValue;
+    public static List<Integer> getDifferentIntFromTwoArrays(int[] firstInts, int[] secondInts) {
+        int length;
+        List<Integer> differentInts = new ArrayList<>();
+        boolean ifFirstLargerOrEcuelThemSecond = firstInts.length >= secondInts.length;
+        if (ifFirstLargerOrEcuelThemSecond) {
+            length = secondInts.length;
+        } else {
+            length = firstInts.length;
         }
-        return array;
+        for (int i = 0; i < length; i++) {
+            if (firstInts[i] != secondInts[i]) {
+                differentInts.add(firstInts[i]);
+                differentInts.add(secondInts[i]);
+            }
+        }
+        if (ifFirstLargerOrEcuelThemSecond) {
+            for (int i = length; i < firstInts.length; i++) {
+                differentInts.add(firstInts[i]);
+            }
+        } else {
+            for (int i = length; i < secondInts.length; i++) {
+                differentInts.add(secondInts[i]);
+            }
+        }
+        return differentInts;
     }
 
     /**
-     * принимает 3 инта:
+     * 17 принимает масив интов, возвращает его же но в реверсном порядке.
+     */
+    public static int[] reverseInts(int[] ints) {
+        for (int i = 0; i < ints.length / 2; i++) {
+            int tempValue = ints[i];
+            ints[i] = ints[ints.length - i - 1];
+            ints[ints.length - i - 1] = tempValue;
+        }
+        return ints;
+    }
+
+    /**
+     * 18. принимает 3 инта:
      * - размер выходного массива
      * - нижняя граница
      * - верхняя граница
      * возвращает массив интов заданой длинны, который содержит случайные числа от нижней границы до верхней границы.
      */
     public static int[] getIntArrayByParameters(int length, int min, int max) {
-        int[] result;
-        result = new int[length];
+        if (length == 0) {
+            System.out.println("The length of the array can not be 0");
+            return new int[]{};
+        }
+        int[] result = new int[length];
         for (int i = 0; i < length; i++) {
             result[i] = (int) (Math.random() * (max - min) + min);
         }
@@ -208,13 +241,13 @@ public class TwentyMethods {
     }
 
     /**
-     * принимает 2 массива чаров, проверяет есть ли в 1 массиве, такая же последовательность символов,
+     * 19 принимает 2 массива чаров, проверяет есть ли в 1 массиве, такая же последовательность символов,
      * которую представляет собой второй массив. Возвращает булеан.
      */
     public static boolean getTrueIfArraysEquals(char[] firstArray, char[] secondArray) {
-        final boolean equals;
-        equals = Arrays.equals(firstArray, secondArray);
-        return equals;
+        String firstString = new String(firstArray);
+        String secondString = new String(secondArray);
+        return firstString.contains(secondString);
     }
 }
 

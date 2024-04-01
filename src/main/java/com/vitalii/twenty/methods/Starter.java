@@ -15,7 +15,7 @@ public class Starter {
         System.out.println("Testing my methods");
 
         /**
-         * 1 принимает масив чаров, выводит его на экран
+         * 1 принимает масив чаров, выводит его на экран.
          */
         System.out.println(STRING);
         System.out.println("1. printCharArrayToConsole");
@@ -24,7 +24,7 @@ public class Starter {
 
         /**
          * 2 принимает массив интов, возвращает массив чаров,
-         * каждый символ в позиции массива соответствует коду символа передаваемого инта
+         * каждый символ в позиции массива соответствует коду символа передаваемого инта.
          */
         System.out.println(STRING);
         System.out.println("2. changeCharArrayToIntArray");
@@ -65,40 +65,40 @@ public class Starter {
         System.out.println(STRING_2);
 
         /**
-         * 4 принимает 3 инта, возвращает большее из них
+         * 4 принимает 3 инта, возвращает большее из них.
          */
         System.out.println(STRING);
         System.out.println("4. returnMaxOfThreeInts");
-        System.out.println(returnMaxOfThreeInts(5, 88, 10));
+        System.out.println(getMaxOfThreeInts(5, 88, 10));
         System.out.println(STRING_2);
 
         /**
-         * 5 принимает 5 интов, возвращает большее из них
+         * 5 принимает 5 интов, возвращает большее из них.
          */
         System.out.println(STRING);
         System.out.println("5. returnMaxOfFiveIntsWithVarargs");
-        System.out.println(returnMaxOfFiveIntsWithVarargs(150, 3, 125, 5, 99));
+        System.out.println(getMaxOfFiveIntsWithVarargs(150, 3, 125, 5, 99));
         System.out.println(STRING_2);
 
         /**
-         * 5 принимает 5 интов, возвращает большее из них
+         * 5 принимает 5 интов, возвращает большее из них.
          */
         System.out.println(STRING);
         System.out.println("5. returnMaxOfFiveIntsWithVarargs");
-        System.out.println(returnMaxOfFiveIntsWithVarargs(150, 3, 125, 5, 99, 1000));
+        System.out.println(getMaxOfFiveIntsWithVarargs(150, 3, 125, 5, 99, 1000));
         System.out.println(STRING_2);
 
         /**
-         * 6 принимает массив чаров, возвращает строку состоящую из символов массива
+         * 6 принимает массив чаров, возвращает строку состоящую из символов массива.
          */
         System.out.println(STRING);
         System.out.println("6. return StringOfArrayChars");
-        System.out.println(returnStringOfArrayChars(new char[]{'H', 'e', 'l', 'l', 'o', '!'}));
+        System.out.println(getStringOfChars(new char[]{'H', 'e', 'l', 'l', 'o', '!'}));
         System.out.println(STRING_2);
 
         /**
          * 8 принимает массив интов, и значение типа инт, возвращает индекс массива в котором
-         * значение совпадает с передаваемым, начиная с начала массива. Если значения в массиве нет возвращает -1
+         * значение совпадает с передаваемым, начиная с начала массива. Если значения в массиве нет возвращает -1.
          */
         System.out.println(STRING);
         System.out.println("8. returns the index from the beginning of array");
@@ -108,7 +108,7 @@ public class Starter {
 
         /**
          * 9 принимает массив интов, и значение типа инт, возвращает индекс массива в котором
-         * значение совпадает с передаваемым, начиная с конца массива. Если значения в массиве нет возвращает -1
+         * значение совпадает с передаваемым, начиная с конца массива. Если значения в массиве нет возвращает -1.
          */
         System.out.println(STRING);
         System.out.println("9. returnsTheIndexFromTheEndOfArray");
@@ -116,15 +116,15 @@ public class Starter {
         System.out.println(STRING_2);
 
         /**
-         * 10 метод принимает инт, и возвращает факториал от заданого инта
+         * 10 метод принимает инт, и возвращает факториал от заданого инта.
          */
         System.out.println(STRING);
         System.out.println("10. returnFactorialOfTheGivenInt");
-        System.out.println(returnFactorial(8));
+        System.out.println(getFactorial(8));
         System.out.println(STRING_2);
 
         /**
-         * 11 принимает инт год, и возвращает тру если год высокосный
+         * 11 принимает инт год, и возвращает тру если год высокосный.
          */
         System.out.println(STRING);
         System.out.println("11. isThisALeapYear");
@@ -132,7 +132,7 @@ public class Starter {
         System.out.println(STRING_2);
 
         /**
-         * 12 принимает массив интов и число, выводит на екран только елементы массива которые кратны этому числу
+         * 12 принимает массив интов и число, выводит на екран только елементы массива которые кратны этому числу.
          */
         System.out.println(STRING);
         System.out.println("12. displayMultipleElementsOfArray");
@@ -140,19 +140,20 @@ public class Starter {
         System.out.println(STRING_2);
 
         /**
-         * 13 метод принимает массив интов сортирует его по возрастанию
+         * 13 метод принимает массив интов сортирует его по возрастанию.
          */
         System.out.println(STRING);
-        System.out.println("13. sortArrayAscend");
-        TwentyMethods.sortArrayAscend(new int[]{33, 10, 5, 103, 54, 89});
+        System.out.println("13. sortIntsInAscendingOrder");
+        int[] sortedInts = TwentyMethods.sortIntsInAscendingOrder(new int[]{33, 10, 5, 103, 54, 89});
+        System.out.println(Arrays.toString(sortedInts));
         System.out.println(STRING_2);
 
         /**
-         * 14 принимает массив байт, если в массиве есть повторяющиеся елементы, возвращает тру
+         * 14 принимает массив байт, если в массиве есть повторяющиеся елементы, возвращает тру.
          */
         System.out.println(STRING);
-        System.out.println("14.getTrueIfElementsRepeat");
-        System.out.println(getTrueIfElementRepeat(new byte[]{100, 22, 99, 5, 10, 22}));
+        System.out.println("14. getTrueIfElementsRepeat");
+        System.out.println(hasRepeatedElements(new byte[]{100, 22, 99, 5, 10, 22}));
         System.out.println(STRING_2);
 
         /**
@@ -160,20 +161,24 @@ public class Starter {
          * из перемноженных елементов входящих массивов.
          */
         System.out.println(STRING);
-        System.out.println("15.getArrayIntsFromMultiplicationOfTwoArrays");
-        System.out.println(Arrays.toString(getArrayIntsFromMultiplicationOfTwoArrays(new int[]{100, 22, 99, 5, 10, 22}, new int[]{2, 10, 3, 87, 102, 5})));
+        System.out.println("15. getArrayIntsFromMultiplicationOfTwoArrays");
+        System.out.println(Arrays.toString(getIntArrayFromMultiplicationOfTwoIntArraysOfTheSameLength(new int[]{100, 22, 99, 5, 10, 22}, new int[]{2, 10, 3, 87, 102, 5})));
         System.out.println(STRING_2);
 
         /**
-         * 16 принимает два массива интов, возвращает массив из елементов, которые не совпадают в массивах
-         */
-
-        /**
-         * 17 принимает масив интов, возвращает его же но в реверсном порядке
+         * 16 принимает два массива интов, возвращает массив из елементов, которые не совпадают в массивах.
          */
         System.out.println(STRING);
-        System.out.println("17.getReverseArray");
-        System.out.println(Arrays.toString(getReverseArray(new int[]{500, 92, 54, 3, 1035, 21})));
+        System.out.println("16. getDifferentIntFromTwoArrays");
+        System.out.println(getDifferentIntFromTwoArrays(new int[]{1,2,3,4,5}, new int[]{1,10,3,4,5,6,7}));
+        System.out.println(STRING_2);
+
+        /**
+         * 17 принимает масив интов, возвращает его же но в реверсном порядке.
+         */
+        System.out.println(STRING);
+        System.out.println("17. getReverseArray");
+        System.out.println(Arrays.toString(reverseInts(new int[]{500, 92, 54, 3, 1035, 21})));
         System.out.println(STRING_2);
 
         /**
@@ -181,20 +186,20 @@ public class Starter {
          * - размер выходного массива
          * - нижняя граница
          * - верхняя граница
-         * возвращает массив интов заданой длинны, который содержит случайные числа от нижней границы до верхней границы"
+         * возвращает массив интов заданой длинны, который содержит случайные числа от нижней границы до верхней границы.
          */
         System.out.println(STRING);
-        System.out.println("18.getIntArrayByParameters");
-        System.out.println(Arrays.toString(getIntArrayByParameters(8, 5, 100)));
+        System.out.println("18. getIntArrayByParameters");
+        System.out.println(Arrays.toString(getIntArrayByParameters(10, 5, 100)));
         System.out.println(STRING_2);
 
         /**
-         * принимает 2 массива чаров, проверяет есть ли в 1 массиве, такая же последовательность символов,
-         * которую представляет собой второй массив. Возвращает булеан
+         * 19 принимает 2 массива чаров, проверяет есть ли в 1 массиве, такая же последовательность символов,
+         * которую представляет собой второй массив. Возвращает булеан.
          */
         System.out.println(STRING);
         System.out.println("19. getTrueIfArraysEquals");
-        System.out.println(getTrueIfArraysEquals(new char[]{'H', 'e', 'l', 'l', 'o', '!'}, new char[]{'H', 'e', 'l', 'l', 'o', '!'}));
+        System.out.println(getTrueIfArraysEquals(new char[]{'H', 'e', 'l', 'l', 'o', '!'}, new char[]{'H', 'e', 'l', 'l', 'o'}));
         System.out.println(STRING_2);
     }
 }

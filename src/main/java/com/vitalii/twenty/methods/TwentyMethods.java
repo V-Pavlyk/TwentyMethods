@@ -185,8 +185,8 @@ public class TwentyMethods {
     public static List<Integer> getDifferentIntFromTwoArrays(int[] firstInts, int[] secondInts) {
         int length;
         List<Integer> differentInts = new ArrayList<>();
-        boolean ifFirstLargerOrEcuelThemSecond = firstInts.length >= secondInts.length;
-        if (ifFirstLargerOrEcuelThemSecond) {
+        boolean isFirstLargerOrEqualThenSecond = firstInts.length >= secondInts.length;
+        if (isFirstLargerOrEqualThenSecond) {
             length = secondInts.length;
         } else {
             length = firstInts.length;
@@ -197,7 +197,7 @@ public class TwentyMethods {
                 differentInts.add(secondInts[i]);
             }
         }
-        if (ifFirstLargerOrEcuelThemSecond) {
+        if (isFirstLargerOrEqualThenSecond) {
             for (int i = length; i < firstInts.length; i++) {
                 differentInts.add(firstInts[i]);
             }
